@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="movies.js"></script>
+</head>
+<body>
+    <h1 id= "nome">Random Movies</h1>
+    <select id="generos">
+        <option value="0">Generos</option>
+        <option value="1">Action</option>
+        <option value="2">Adventure</option>
+        <option value="3">Animation</option>
+        <option value="4">Comedy</option>
+        <option value="5">Crime</option>
+        <option value="6">Drama</option>
+        <option value="7">Fantasy</option>
+        <option value="8">Horror</option>
+        <option value="9">Romance</option>
+        <option value="10">Science Fiction</option>
+        <option value="11">Thriller</option>
+    </select>    
+
+    
+
+
+    <div id="filtros">
+        <div id="select_ano">
+            <label for="ano">Ano de Lançamento:</label>
+            <br>
+            <input type="range" id="ano_id" name="ano_name" min="1900" max="2024" value="2024" oninput="this.nextElementSibling.value = this.value">
+            <output>2024</output>
+        </div>
+    </div>
+    <div id="info">
+        <div id="poster">
+            <img src="https://picsum.photos/200/300" alt="Movie Poster" id = "image_poster">
+        </div>
+        <h2 id="titulo">Movie Title (ano)</h2>
+        <p id = "genero">Genero</p>
+        <p id = "link">Link</p>
+    </div>
+    <button id="gerar">GERAR</button>
+
+    <script src="movies.js"></script>
+
+
+</body>
+</html>
