@@ -1,5 +1,6 @@
 body {
     background-color: black;
+
     }
     #poster {
         width: 200px;
@@ -74,8 +75,6 @@ body {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     
-
-
     #info {
         text-align: center;
         color: white;
@@ -104,5 +103,30 @@ body {
         background-color: black;
         width: 45px;
         
+    }
+
+
+    .barra-filtragem {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #000000;
+    }
+    
+    .barra-filtragem label {
+        margin-right: 5px;
+    }
+    
+    .barra-filtragem input {
+        padding: 5px;
+        border: 1px solid #000000;
+    }
+    
+    .barra-filtragem button {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: rgb(0, 0, 0);
+        border: none;
+        cursor: pointer;
     }
     
