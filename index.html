@@ -22,16 +22,31 @@
         <option value="11">Thriller</option>
     </select>    
 
-    
 
 
     <div id="filtros">
-        <div id="select_ano">
+        
+        <div class="barra-filtragem">
+            
+            <form>
+                <label for="ano-inicio">Ano de Início:</label>
+                <br>
+                <input type="number" id="ano-inicio" name="ano-inicio" min="2000" max="2024">
+                <br>
+                <label for="ano-fim">Ano de Fim:</label>
+                <br>
+                <input type="number" id="ano-fim" name="ano-fim" min="2000" max="2024">
+                <button type="submit">Filtrar</button> 
+            </form>
+        </div>
+
+        <div id="select_ano"> 
             <label for="ano">Ano de Lançamento:</label>
             <br>
-            <input type="range" id="ano_id" name="ano_name" min="1900" max="2024" value="2024" oninput="this.nextElementSibling.value = this.value">
-            <output>2024</output>
-        </div>
+            <input type="range" id="ano" name="ano_name" step="1" min="1900" max="2024" oninput="this.nextElementSibling.value = this.value">
+            <output></output>
+        </div> 
+        
     </div>
     <div id="info">
         <div id="poster">
