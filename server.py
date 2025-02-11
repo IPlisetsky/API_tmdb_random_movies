@@ -33,14 +33,19 @@ def escolher_linha_aleatoria():
     
     request_genero = request.args.get('generos', type=int)
     
+    request_ano = request.args.get('ano-inicio', type=int)
+    request_ano_fim = request.args.get('ano-fim', type=int)
+
     
     genero = generos_dic[request_genero]
     print(f"\n\n\nGENERO ESCOLHIDO: {genero}\n\n\n")
+    print(f"\n\n\nANO: {request_ano}\n\n\n")
+    print(f"\n\n\nANO: {request_ano_fim}\n\n\n")
     
     query = f"""SELECT * FROM moviesdatabase WHERE GENERO LIKE '%{genero}%' 
     AND ORIGEM LIKE '%US%'  
+    AND ANO BETWEEN {request_ano} AND {request_ano_fim}
     """
-    #AND ANO = '{request_ano}'
     cursor.execute(query)
 
     #cursor.execute("SELECT * FROM moviesdatabase WHERE GENERO LIKE '%%'")
@@ -59,7 +64,8 @@ def escolher_linha_aleatoria():
         try:
             return {
                 "id": linha[1],
-                "titulo": linha[7],
+                "titulo": linha[0],
+                "ano_lancamento": linha[7],
                 "genero": linha[3].split(","),
                 "link": linha[6], 
                 "poster": linha[2] 
@@ -69,7 +75,6 @@ def escolher_linha_aleatoria():
     else:
         escolher_linha_aleatoria()
         return {"error": "Nenhum filme encontrado"}
-
 
 
 @app.route('/gerar', methods=['GET'])
