@@ -5,7 +5,7 @@ import subprocess
 import sqlite3
 import os
 
-api_key = ("eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZTdjMDA1MTBlNWZiMzMyNmY3NmMwZTA5NzBlMTUwOCIsIm5iZiI6MTcyNDY5NDk0NC42OTM4ODUsInN1YiI6IjY2Y2NhODJkNzkzMmNiOWZhODMyYTFhNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aNti6ocbkfvPHcbSOCm8Rek9PK6Ui67Krb_SBJcqIQc")
+api_key = ("")
 
 
 dados = []
